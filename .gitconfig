@@ -1,0 +1,26 @@
+# This is Git's per-user configuration file.
+[core]
+	excludesfile = $HOME/.gitignore-global
+
+[init]
+	defaultBranch = main
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[submodule]
+	recurse = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[includeIf "hasconfig:remote.*.url:git@github.com*/**"]
+    path = .gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@gitlab.*.ru*/**"]
+    path = .gitconfig-work
