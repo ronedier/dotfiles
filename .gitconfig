@@ -22,5 +22,13 @@
 
 [includeIf "hasconfig:remote.*.url:git@github.com*/**"]
     path = .gitconfig-personal
-[includeIf "hasconfig:remote.*.url:git@gitlab.*.ru*/**"]
+[includeIf "hasconfig:remote.*.url:https://github.com*/**"]
+    path = .gitconfig-personal
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.*.ru/**"]
     path = .gitconfig-work
+[includeIf "hasconfig:remote.*.url:https://gitlab.*.ru/**"]
+    path = .gitconfig-work
+
+[url "ssh://git@"]
+	insteadOf = https://
