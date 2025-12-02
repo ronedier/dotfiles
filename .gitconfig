@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [core]
-	excludesfile = $HOME/.gitignore-global
+	excludesfile = ~/.gitignore-global
 
 [init]
 	defaultBranch = main
