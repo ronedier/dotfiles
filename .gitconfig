@@ -1,4 +1,3 @@
-# This is Git's per-user configuration file.
 [core]
 	excludesfile = ~/.gitignore-global
 
@@ -20,10 +19,12 @@
 [push]
 	autoSetupRemote = true
 
+# To switch between personal and business email, I use `includeIf`.
 [includeIf "hasconfig:remote.*.url:git@github.com*/**"]
 	path = .gitconfig-personal
 [includeIf "hasconfig:remote.*.url:https://github.com*/**"]
 	path = .gitconfig-personal
+# For a new personal project, you may not have a remote URL from the beginning.
 [includeIf "gitdir:~/projects/personal/"]
 	path = .gitconfig-personal
 
@@ -32,5 +33,16 @@
 [includeIf "hasconfig:remote.*.url:https://gitlab.*.ru*/**"]
 	path = .gitconfig-work
 
-[url "ssh://git@"]
-	insteadOf = https://
+# Replace http with ssh for Golang private modules resolution.
+# Replace it here (globally) because otherwise `go mod tidy` failed during the first attempt.
+# It creates dir for vsc cache and tries to run `git ls-remote -q <module_http_url>`.
+# But because the directory is still empty - there's no such thing as `git remote url`.
+# So the derective `includeIf` just doesn't work. And so we can't force golang private repository to work through ssh.
+#
+# One more thing - do not replace just https with ssh, specify domain.
+# Otherwise git lfs will fail as well when trying to work with Artifactory through ssh.
+[url "ssh://git@gitlab."]
+	insteadOf = https://gitlab.
+
+[url "ssh://git@github."]
+	insteadOf = https://github.
