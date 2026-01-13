@@ -32,6 +32,8 @@
 	path = .gitconfig-work
 [includeIf "hasconfig:remote.*.url:https://gitlab.*.ru*/**"]
 	path = .gitconfig-work
+[includeIf "hasconfig:remote.*.url:*//*dns-master.*/**"]
+	path = .gitconfig-work
 
 # Replace http with ssh for Golang private modules resolution.
 # Replace it here (globally) because otherwise `go mod tidy` failed during the first attempt.
