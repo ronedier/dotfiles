@@ -10,6 +10,14 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 
+[merge]
+  tool = nvimdiff
+[mergetool]
+  keepBackup = false
+  conflictstyle = diff3
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+
 [submodule]
 	recurse = true
 
