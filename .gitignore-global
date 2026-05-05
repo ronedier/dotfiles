@@ -18,5 +18,3 @@ log/
 *.log
 
 .venv/
-
-tmp/
