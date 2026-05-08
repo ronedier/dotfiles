@@ -1,3 +1,13 @@
+[alias]
+	# <https://zarino.co.uk/post/git-set-upstream/>
+	set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+	wt = worktree
+	wta = worktree add
+	sw = switch
+	p = pull
+	pr = pull --rebase
+	bl = branch --list
+
 [core]
 	excludesfile = ~/.gitignore-global
 
