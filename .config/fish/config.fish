@@ -35,4 +35,4 @@ source $HOME/.config/fish/themes/avg_mirage.fish
 
 abbr -a incognito 'fish --private'
 abbr -a gtn 'git tag $(svu next)'
-abbr -a grep 'ripgrep'
+abbr -a grep 'rg'
