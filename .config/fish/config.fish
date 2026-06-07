@@ -20,7 +20,7 @@ if status --is-interactive
             fish_add_path -g $HOME/.nix-profile/bin $HOME/.opencode/bin
 
         case Darwin
-            fish_add_path -g /opt/local/bin /opt/local/sbin /usr/local/bin /Applications/Obsidian.app/Contents/MacOS
+            fish_add_path -g $HOME/.local/bin /opt/local/bin /opt/local/sbin /usr/local/bin /Applications/Obsidian.app/Contents/MacOS
     end
 
     # Source work-specific config and functions which are ignored by git.
