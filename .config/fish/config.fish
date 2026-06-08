@@ -28,7 +28,7 @@ if status --is-interactive
     set -a fish_function_path $HOME/.config/fish/work/functions
 
     zoxide init fish --cmd cd | source
-    atuin init fish --disable-ai | source
+    atuin init fish --disable-ai --disable-up-arrow | source
 end
 
 # Theme apply
