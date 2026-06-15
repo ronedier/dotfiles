@@ -17,7 +17,7 @@ if status --is-interactive
 
     switch (uname)
         case Linux
-            fish_add_path -g $HOME/.nix-profile/bin $HOME/.opencode/bin $HOME/.atuin/bin
+            fish_add_path -g $HOME/.nix-profile/bin $HOME/.opencode/bin $HOME/.atuin/bin /usr/local/cuda/bin $HOME/projects/external/llama.cpp/build/bin
 
         case Darwin
             fish_add_path -g $HOME/.local/bin /opt/local/bin /opt/local/sbin /usr/local/bin /Applications/Obsidian.app/Contents/MacOS
