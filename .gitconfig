@@ -37,13 +37,16 @@
 [push]
 	autoSetupRemote = true
 
-# To switch between personal and business email, I use `includeIf`.
+# To switch between personal and business emails, I use `includeIf`.
 [includeIf "hasconfig:remote.*.url:git@github.com*/**"]
 	path = .gitconfig-personal
 [includeIf "hasconfig:remote.*.url:https://github.com*/**"]
 	path = .gitconfig-personal
-# For a new personal project, you may not have a remote URL from the beginning.
+# For a new personal project, I may not have a remote URL from the beginning.
 [includeIf "gitdir:~/projects/personal/"]
+	path = .gitconfig-personal
+# Pass store lives here
+[includeIf "gitdir:~/.password-store/"]
 	path = .gitconfig-personal
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.*.ru*/**"]
