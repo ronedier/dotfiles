@@ -25,6 +25,7 @@ if status --is-interactive
 
     # Source work-specific config and functions which are ignored by git.
     source $HOME/.config/fish/work/*
+    source $HOME/.config/fish/work/variables.fish
     set -a fish_function_path $HOME/.config/fish/work/functions
 
     zoxide init fish --cmd cd | source
