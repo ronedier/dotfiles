@@ -48,6 +48,9 @@
 # Pass store lives here
 [includeIf "gitdir:~/.password-store/"]
 	path = .gitconfig-personal
+# Skills repo
+[includeIf "gitdir:~/.agents/skills/"]
+	path = .gitconfig-personal
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.*.ru*/**"]
 	path = .gitconfig-work
