@@ -51,6 +51,9 @@
 # Skills repo
 [includeIf "gitdir:~/.agents/skills/"]
 	path = .gitconfig-personal
+# Pi extensions repo
+[includeIf "gitdir:~/.pi/agent/extensions/"]
+	path = .gitconfig-personal
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.*.ru*/**"]
 	path = .gitconfig-work

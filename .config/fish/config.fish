@@ -6,6 +6,7 @@ if status --is-interactive
     set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
     set -gx GO111MODULE "on"
     set -gx fish_prompt_pwd_dir_length 0
+    set -gx BUN_INSTALL "$HOME/.bun"
 
     if test (uname) = Linux
         set -gx GIT_ASKPASS "/usr/bin/ksshaskpass"
@@ -13,7 +14,7 @@ if status --is-interactive
     end
 
 
-    fish_add_path -g $HOME/go/bin $HOME/.cargo/bin $HOME/.krew/bin
+    fish_add_path -g $HOME/go/bin $HOME/.cargo/bin $HOME/.krew/bin $HOME/.bun/bin
 
     switch (uname)
         case Linux
