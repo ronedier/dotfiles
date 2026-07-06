@@ -39,3 +39,7 @@ source $HOME/.config/fish/themes/avg_mirage.fish
 abbr -a incognito 'fish --private'
 abbr -a gtn 'git tag $(svu next)'
 abbr -a grep 'rg'
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
