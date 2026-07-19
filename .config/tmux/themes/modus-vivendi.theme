@@ -1,0 +1,83 @@
+#===============================================================================
+# tmux theme: Modus Vivendi (dark)
+# Based on the modus-vivendi palette from protesilaos.com/emacs/modus-themes-colors
+# Palette: CC0 (Public Domain) — https://protesilaos.com/emacs/modus-themes-colors
+#
+# Usage:
+#   tmux source-file ~/.config/tmux/themes/modus-vivendi.theme
+#   or from within tmux:
+#   :source-file ~/.config/tmux/themes/modus-vivendi.theme
+#===============================================================================
+
+# --- Palette (stored as user options for reference / scripting) -----------
+
+set -g @modus_vivendi_bg_main         "#000000"
+set -g @modus_vivendi_bg_dim          "#1e1e1e"
+set -g @modus_vivendi_fg_main         "#ffffff"
+set -g @modus_vivendi_fg_dim          "#989898"
+set -g @modus_vivendi_fg_alt          "#c6daff"
+set -g @modus_vivendi_bg_active       "#535353"
+set -g @modus_vivendi_bg_inactive     "#303030"
+set -g @modus_vivendi_border          "#646464"
+set -g @modus_vivendi_red             "#ff5f59"
+set -g @modus_vivendi_green           "#44bc44"
+set -g @modus_vivendi_yellow          "#d0bc00"
+set -g @modus_vivendi_blue            "#2fafff"
+set -g @modus_vivendi_magenta         "#feacd0"
+set -g @modus_vivendi_cyan            "#00d3d0"
+
+# Semantic
+set -g @modus_vivendi_bg_region       "#5a5a5a"
+set -g @modus_vivendi_fg_region       "#ffffff"
+set -g @modus_vivendi_bg_completion   "#2f447f"
+
+# Mode-line (window tabs)
+set -g @modus_vivendi_bg_ml_active    "#505050"
+set -g @modus_vivendi_fg_ml_active    "#ffffff"
+set -g @modus_vivendi_bg_ml_inactive  "#2d2d2d"
+set -g @modus_vivendi_fg_ml_inactive  "#969696"
+
+# --- Theme name -----------------------------------------------------------
+
+set -g @theme_name "modus-vivendi"
+
+# --- Status bar -----------------------------------------------------------
+
+set -g status-style "bg=#1e1e1e,fg=#ffffff"
+set -g status-position top
+
+set -g status-left  "#[bg=#2fafff,fg=#000000,bold] #S #[bg=#1e1e1e]"
+set -g status-left-length 32
+
+set -g status-right "#[fg=#989898]#h | %Y-%m-%d %H:%M "
+set -g status-right-length 80
+
+# --- Window tabs ----------------------------------------------------------
+
+set -g window-status-current-style "bg=#505050,fg=#ffffff,bold"
+set -g window-status-style "bg=#303030,fg=#989898"
+set -g window-status-format " #I: #W "
+set -g window-status-current-format " #I: #W "
+set -g window-status-separator ""
+
+# --- Pane borders ---------------------------------------------------------
+
+set -g pane-border-style "bg=#1e1e1e,fg=#646464"
+set -g pane-active-border-style "bg=#1e1e1e,fg=#2fafff"
+
+# --- Messages / command line ----------------------------------------------
+
+set -g message-style "bg=#535353,fg=#ffffff"
+set -g message-command-style "bg=#2f447f,fg=#ffffff"
+
+# --- Copy / choice mode ---------------------------------------------------
+
+set -g mode-style "bg=#5a5a5a,fg=#ffffff"
+
+# --- Clock ----------------------------------------------------------------
+
+set -g clock-mode-colour "#00d3d0"
+
+# --- Misc -----------------------------------------------------------------
+
+set -g status-interval 15
