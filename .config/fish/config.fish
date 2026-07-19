@@ -34,7 +34,7 @@ if status --is-interactive
 end
 
 # Theme apply
-source $HOME/.config/fish/themes/avg_mirage.fish
+source $HOME/.config/fish/themes/modus-operandi.fish
 
 abbr -a incognito 'fish --private'
 abbr -a gtn 'git tag $(svu next)'
