@@ -56,8 +56,8 @@ set -g status-right-length 80
 
 set -g window-status-current-style "bg=#c8c8c8,fg=#000000,bold"
 set -g window-status-style "bg=#e0e0e0,fg=#595959"
-set -g window-status-format " #I: #W "
-set -g window-status-current-format " #I: #W "
+set -g window-status-format " #I: #W #{?window_zoomed_flag,#[fg=#a60000]⛶ Z ,}"
+set -g window-status-current-format " #I: #W #{?window_zoomed_flag,#[fg=#a60000]⛶ Z ,}"
 set -g window-status-separator ""
 
 # --- Pane borders ---------------------------------------------------------
