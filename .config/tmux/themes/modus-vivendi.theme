@@ -67,8 +67,8 @@ set -g pane-active-border-style "bg=#1e1e1e,fg=#2fafff"
 
 # --- Messages / command line ----------------------------------------------
 
-set -g message-style "bg=#535353,fg=#ffffff"
-set -g message-command-style "bg=#2f447f,fg=#ffffff"
+set -g message-style "bg=#535353,fg=#ffffff,fill=#535353"
+set -g message-command-style "bg=#2f447f,fg=#ffffff,fill=#2f447f"
 
 # --- Copy / choice mode ---------------------------------------------------
 
