@@ -1,4 +1,5 @@
 if status --is-interactive
+    fish_config theme choose "Dracula Official"
     set -U fish_greeting
     set -gx LANG "en_US.UTF-8"
     set -gx EDITOR "nvim"
@@ -33,9 +34,6 @@ if status --is-interactive
     atuin init fish --disable-ai --disable-up-arrow | source
     pass show fish/envs | source
 end
-
-# Theme apply
-source $HOME/.config/fish/themes/modus-operandi.fish
 
 abbr -a incognito 'fish --private'
 abbr -a gtn 'git tag $(svu next)'
