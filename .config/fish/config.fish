@@ -31,6 +31,7 @@ if status --is-interactive
 
     zoxide init fish --cmd cd | source
     atuin init fish --disable-ai --disable-up-arrow | source
+    pass show fish/envs | source
 end
 
 # Theme apply
