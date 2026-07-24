@@ -29,6 +29,9 @@ function fish_prompt --description 'Write out the prompt'
     if not set -q __fish_git_prompt_color_cleanstate
         set -g __fish_git_prompt_color_cleanstate green --bold
     end
+    if not set -q __fish_git_prompt_char_dirtystate
+        set -g __fish_git_prompt_char_dirtystate '+'
+    end
 
     set -l color_cwd
     set -l color_suffix
