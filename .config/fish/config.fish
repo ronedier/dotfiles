@@ -22,7 +22,7 @@ if status --is-interactive
             fish_add_path -g $HOME/.nix-profile/bin $HOME/.atuin/bin /usr/local/cuda/bin $HOME/projects/external/llama.cpp/build/bin
 
         case Darwin
-            fish_add_path -g $HOME/.local/bin /opt/local/bin /opt/local/sbin /usr/local/bin /Applications/Obsidian.app/Contents/MacOS
+            fish_add_path -g $HOME/.local/bin /opt/local/bin /opt/local/sbin /usr/local/bin /Applications/Obsidian.app/Contents/MacOS /Users/ronedier/.opencode/bin
     end
 
     # Source work-specific config and functions which are ignored by git.
@@ -32,7 +32,6 @@ if status --is-interactive
 
     zoxide init fish --cmd cd | source
     atuin init fish --disable-ai --disable-up-arrow | source
-    pass show fish/envs | source
 end
 
 abbr -a incognito 'fish --private'
