@@ -1,5 +1,5 @@
 function mkd -d "Create a directory and set CWD"
-    command mkdir $argv
+    command mkdir -p $argv
     if test $status = 0
         set -l last_arg $argv[-1]
         if not string match -q -- '-*' $last_arg
